@@ -1,0 +1,404 @@
+:root{
+    --white-color: #fff;
+    --black-color: #000000;
+    --scrollbarBG: #b70000;
+    --thumbBG: #040505;
+    --bottom-part: rgb(59,0,20);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    
+}
+.container{
+    width: 100%;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    /* overflow: hidden; */
+}
+.container .icon-pause{
+    display: none;
+}
+.container.playing .icon-pause{
+    display: inline-block;
+}
+.container.playing .icon-play{
+    display: none;
+}
+.container .btnn.active {
+    color: var(--scrollbarBG);
+}
+
+.contain_up{
+    display: flex;
+    width: 100%;
+    height: 85%;
+}
+.fame{
+    background-color: rgb(207, 207, 207);
+    height: 100%;
+    border-radius: 10px;
+}
+.container_left{
+    background-color: #850E35;
+    padding-right: 0;
+    border-top-left-radius: 10px;
+    /* border-bottom-left-radius:10px; */
+    /* overflow: hidden; */
+    color: var(--white-color);
+}
+.direct_bar{
+    width: 100%;
+    border-radius: 10px;
+}
+.btn{
+    /* background-color: #4CAF50; */
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 100%;
+    cursor: pointer;
+    background-color: rgba(152, 152, 152,0.5);
+    /* border-radius: 20px; */
+    color: var(--white-color);
+}
+.logo{
+    font-size: 26px;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.songsOption .btn{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.albumsOption .btn{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+}
+.myplaylistOption .btn{
+    border-radius: 20px;
+    margin-top: 40px;
+}
+
+
+
+
+.search{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+
+}
+.search_box{
+    position: relative;
+    height: 30px;
+    width: 500px;
+    background-color: #fff;
+    border-radius: 20px;
+    
+}
+.search_input{
+    position: absolute;
+    width: 480px;
+    height: 29px;
+    border: none;
+    outline: none;
+}
+
+
+
+
+
+.container_right{
+    background-color:var(--bottom-part);
+    border-top-right-radius: 10px;
+    /* border-bottom-right-radius:10px; */
+}
+
+
+
+/* CENTER part */
+
+.center{
+    display: flex;
+    width: 100%;
+    /* background-color: #e3a5b9; */
+}
+
+.song_center{
+    margin: 10px 80px 80px;
+    /* background-color: #fff; */
+}
+
+.thumb{
+    display: flex;
+    margin: auto;
+
+}
+.thumbpic{
+    width: 100%;
+    padding-top: 100%;
+    border-radius: 10%;
+    /* background-color: #333; */
+    margin: auto;
+    background-size: cover;
+    background-position: center center;
+}
+
+.body{
+    text-align: center;
+}
+
+.title{
+    margin-top: 8px;
+}
+
+.author{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* right part */
+.right{
+    width: 100%;
+}
+.contain_songs{
+    /* background-color: bisque; */
+    height: 400px;
+    overflow-y: scroll;
+    
+}
+.contain_songs::-webkit-scrollbar {
+    width: 11px;
+}
+.contain_songs{
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+.contain_songs::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+    border-radius: 6px;
+}
+.contain_songs::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG) ;
+    border-radius: 6px;
+    border: 3px solid var(--scrollbarBG);
+}
+.Songs{ 
+    color: var(--white-color);
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 2px 5px;
+    margin: 10px;
+    border-radius: 30px;
+    border: 1px solid black;
+    background-color: rgb(0, 0, 0);
+    overflow: visible;
+}
+
+/* 33 */
+.Songs.active{
+    background-color: rgb(255, 0, 43);
+    box-shadow: 1px 1px 1px pink;
+}
+.Songs.active .minus-text,
+.Songs.active .authors,
+.Songs.active .titles {
+    color: #000000;
+}
+.pics{
+    width: 5%;
+    padding: 5%;
+    border-radius: 50% ;
+    background-size: cover;
+    overflow: 0;
+}
+.bodys {
+    margin-left: 20px;
+    margin-right: 20px;
+    flex-grow: 1;
+
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* left bottom part */
+.playerr_bar_contain{
+    height: 80px;
+    width: 100%;
+    background-color: #3b0014;    
+    /* display: block; */
+    /* justify-content: center;
+    align-items: center; */
+}
+.ct{
+
+}
+.Songsb{
+    padding: 15px 0;
+    /* background-color: #b70000; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    line-height: 25px;
+    color: var(--white-color);
+}
+.picsb{
+    margin-left: 20px;
+    width: 5%;
+    padding: 5%;
+    background-size: cover;
+}
+.bodysb{
+    margin-left: 10px;
+
+}
+.titlesb{
+
+}
+.authors{
+
+}
+
+
+
+
+
+
+
+/* control part */
+.directcontrol{
+    display: flex;
+    flex-direction: column;
+ 
+    /* background-color: antiquewhite; */
+    height: 100%;
+}
+.control{
+    margin-top:10px ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--white-color);
+
+}
+.btn-toggle-play{
+    background-color: #040505;
+    padding: 10px;
+    border-radius: 50px;
+    border: 1px solid pink;
+}
+.progress::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+    border-radius: 6px;
+}
+input[type="range"] {
+    accent-color: rgb(207, 3, 3);
+}
+
+/* volume */
+.lyricAndvolume{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.lyric_contain{
+    margin-right: 50px;
+}
+.lyrics_btn{
+    color: var(--white-color);
+    border: 1px solid pink;
+    background-color: #000000;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 18;
+
+    /* background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 100%;
+    cursor: pointer;
+    background-color: rgba(152, 152, 152,0.5);
+    /* border-radius: 20px; */
+
+}
+.volume_contain{
+
+}
+.volume{
+
+}
+.value{
+    color: var(--white-color);
+}
+
+
+
+
+
+
+
